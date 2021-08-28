@@ -3,4 +3,49 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <color name="black">#000000</color><!--黑色 -->
+    <color name="black_color">#000000</color>
+    <color name="dark_grey_color">#444444</color>
+    <color name="dark_grey_color_trans">#57444444</color>
+    <color name="grey_color">#808080</color>
+    <color name="light_grey_color">#c4c4c4</color>
+    <color name="white_color">#ffffff</color>
+    <color name="red_color">#ff0000</color>
+    <color name="green_color">#96c11f</color>
+
+    <color name="imdn_read_color">#3eb5c0</color>
+    <color name="toolbar_color">#e1e1e1</color>
+    <color name="header_background_color">#f3f3f3</color>
+    <color name="security_gray_color">#c2c2c2</color>
+    <color name="chat_bubble_text_color">#a1a1a1</color>
+    <color name="chat_bubble_incoming_color">#f3f3f3</color>
+    <color name="chat_bubble_outgoing_color">#ffeee5</color>
+
+    <color name="disabled_color">#808080</color>
+    <color name="contact_disabled_color">#99ffffff</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="top_text">#015F89</color>
+    <color name="evalute_text">#0996DA</color>
+
+    <color name="control_parent_title">#A7DEFF</color>
+    <color name="control_parent_text">#0996DA</color>
+
+    <color name="control_other_text">#02092F</color>
+
+    <color name="control_call_name_text">#1A88FF</color>
+    <color name="control_call_name_text1">#3DEF91</color>
+    <color name="control_call_name_text2">#EA6562</color>
+
+    <color name="gray333">#333333</color>
+    <color name="gray666">#666666</color>
+    <color name="gray999">#999999</color>
+    <color name="color_gray">#CCCCCC</color>
+
+    <color name="dark_gray_bg">#F5F5F5</color>
+    <color name="barline">#6D8CFF</color>
+
+    <color name="blue">#0000FF</color><!--蓝色 -->
+    <color name="blue_tv">#0065DD</color>
 </resources>

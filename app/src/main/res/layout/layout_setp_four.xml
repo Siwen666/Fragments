@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:orientation="vertical"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:text="@string/please_select_device_position"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="18sp">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <Spinner
+                        android:id="@+id/spinner_yuanqu"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/please_select_yuanqu"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:textSize="23sp"
+                        android:background="@drawable/spinner_shape"/>
+
+                    <Spinner
+                        android:id="@+id/spinner_building"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/please_select_building"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:textSize="23sp"
+                        android:background="@drawable/spinner_shape"/>
+
+                    <Spinner
+                        android:id="@+id/spinner_loudong"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/please_select_loudong"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:textSize="23sp"
+                        android:background="@drawable/spinner_shape"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner_danyuan"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/please_select_danyuan"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:textSize="23sp"
+                        android:background="@drawable/spinner_shape"/>
+
+                    <Spinner
+                        android:id="@+id/spinner_floor"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/please_select_floor"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:textSize="23sp"
+                        android:background="@drawable/spinner_shape"/>
+
+                    <Spinner
+                        android:id="@+id/spinner_room"
+                        android:layout_width="180dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/please_select_room"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:textSize="23sp"
+                        android:background="@drawable/spinner_shape"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:orientation="vertical"/>
+
+    </LinearLayout>
+
+</LinearLayout>

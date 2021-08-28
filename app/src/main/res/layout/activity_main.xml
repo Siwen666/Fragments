@@ -5,11 +5,407 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@drawable/contro_parent_bg"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- TOP MENU LAYOUT -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/control_prison_top_bg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:gravity="start|center"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_launcher_foreground"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="注册导航demo"
+                android:textColor="@color/control_parent_title"
+                android:textSize="42sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:gravity="end|center"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/contro_parent_time"/>
+            <TextView
+                android:id="@+id/main_date_text"
+                android:layout_marginStart="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="日期"
+                android:textSize="36sp"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:id="@+id/main_week_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="周"
+                android:textSize="36sp"
+                android:textColor="@color/white"
+                />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/white"/>
+
+            <TextView
+                android:id="@+id/main_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="时间"
+                android:textSize="36sp"
+                android:textColor="@color/white"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="0.1">
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:orientation="vertical"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@drawable/control_parent_menus">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="欢迎接入智能门禁系统"
+                        android:textSize="25sp"
+                        android:textColor="@color/blue"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:id="@+id/register_step1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:background="@drawable/register_gray">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="39dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"
+                                    android:gravity="center"
+                                    android:text="1"/>
+                            </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:gravity="center"
+                                android:text="配置IP"/>
+                        </LinearLayout>
+                        <ImageView
+                            android:id="@+id/register_next1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/register_next"/>
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:id="@+id/register_step2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:background="@drawable/register_gray">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="39dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"
+                                    android:gravity="center"
+                                    android:text="2"/>
+                            </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:gravity="center"
+                                android:text="配置服务地址"/>
+                        </LinearLayout>
+                        <ImageView
+                            android:id="@+id/register_next2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/register_next"/>
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:id="@+id/register_step3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:background="@drawable/register_gray">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="39dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"
+                                    android:gravity="center"
+                                    android:text="3"/>
+                            </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:gravity="center"
+                                android:text="选择设备类型"/>
+                        </LinearLayout>
+                        <ImageView
+                            android:id="@+id/register_next3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/register_next"/>
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:id="@+id/register_step4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:background="@drawable/register_gray">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="39dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"
+                                    android:gravity="center"
+                                    android:text="4"/>
+                            </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:gravity="center"
+                                android:text="选择安装位置"/>
+                        </LinearLayout>
+                        <ImageView
+                            android:id="@+id/register_next4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/register_next"/>
+
+                        <LinearLayout
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:id="@+id/register_step5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/register_qure_gray"
+                                android:orientation="vertical">
+                            </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:gravity="center"
+                                android:text="配置完成"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8">
+
+                    <FrameLayout
+                        android:id="@+id/reg_vf_viewflipper"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <include
+                            android:id="@+id/page1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            layout="@layout/layout_setp_one" />
+
+                        <include
+                            android:id="@+id/page2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            layout="@layout/layout_setp_two" />
+
+                        <include
+                            android:id="@+id/page3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            layout="@layout/layout_setp_three" />
+
+                        <include
+                            android:id="@+id/page4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            layout="@layout/layout_setp_four" />
+
+                        <include
+                            android:id="@+id/page5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            layout="@layout/layout_setp_five" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/reg_btn_previous"
+                        android:layout_width="130dp"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="15dp"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:text="上一步"
+                        android:background="@drawable/control_parent_blue_floor"/>
+
+                    <Button
+                        android:id="@+id/reg_btn_next"
+                        android:layout_width="130dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:text="下一步"
+                        android:background="@drawable/control_parent_blue_floor"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:orientation="vertical">
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.05"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="8dip"
+        android:paddingRight="8dip">
+
+    </LinearLayout>
 
 </LinearLayout>

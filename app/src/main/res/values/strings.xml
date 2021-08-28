@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">MyFragments</string>
+
+    <!-- 注册1 -->
+    <string name="please_input_device_ip">请配置本机IP</string>
+    <string name="devices_ip">IP地址：</string>
+    <string name="gateway">网  关：</string>
+    <string name="subnet_mask">子网掩码：</string>
+    <string name="dns_1">DNS1：</string>
+    <string name="dns_2">DNS2：</string>
+
+    <!-- 注册2 -->
+    <string name="please_input_ip">请配置服务地址</string>
+    <string name="base_url_ip">接口服务地址：</string>
+    <string name="sip_url_ip">SIP服务地址：</string>
+    <string name="socket_url_ip">socket服务地址：</string>
+
+    <!-- 注册3 -->
+    <string name="please_select_device_type">请选择设备类型</string>
+    <string name="fenkong">楼栋</string>
+    <string name="zikong">楼层</string>
+    <string name="jiancang">房间</string>
+
+    <!-- 注册4 -->
+    <string name="please_select_device_position">请选择安装位置</string>
+    <string name="please_select_yuanqu">请选择园区</string>
+    <string name="please_select_building">请选择建筑物</string>
+    <string name="please_select_loudong">请选择楼栋</string>
+    <string name="please_select_danyuan">请选择单元</string>
+    <string name="please_select_floor">请选择楼层</string>
+    <string name="please_select_room">请选择房间</string>
+
+    <!-- 注册5 -->
+    <string name="device_phone_number">本设备分机号</string>
+    <string name="register_complete_tips">您已配置完成，请进入系统使用！</string>
+
 </resources>
