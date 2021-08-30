@@ -114,7 +114,7 @@ public class fragmentPageFour extends Fragment {
         mSpinnerYuanQu.setAdapter(YuanQuAdapter);
         //第五步：添加监听器，为下拉列表设置事件的响应
         mSpinnerYuanQu.setOnItemSelectedListener(selectedListener);
-        if (isHave){
+        if (!isHave){
             mSpinnerYuanQu.setSelection(idx); // 设置默认选项
         }
 
@@ -137,7 +137,7 @@ public class fragmentPageFour extends Fragment {
         mSpinnerBuilding.setAdapter(BuildingAdapter);
         //第五步：添加监听器，为下拉列表设置事件的响应
         mSpinnerBuilding.setOnItemSelectedListener(selectedListener);
-        if (isHave){
+        if (!isHave){
             mSpinnerBuilding.setSelection(idx); // 设置默认选项
         }
 
@@ -160,7 +160,7 @@ public class fragmentPageFour extends Fragment {
         mSpinnerLouDong.setAdapter(LouDongAdapter);
         //第五步：添加监听器，为下拉列表设置事件的响应
         mSpinnerLouDong.setOnItemSelectedListener(selectedListener);
-        if (isHave){
+        if (!isHave){
             mSpinnerLouDong.setSelection(idx); // 设置默认选项
         }
 
@@ -183,7 +183,7 @@ public class fragmentPageFour extends Fragment {
         mSpinnerDanYuan.setAdapter(DanYuanAdapter);
         //第五步：添加监听器，为下拉列表设置事件的响应
         mSpinnerDanYuan.setOnItemSelectedListener(selectedListener);
-        if (isHave){
+        if (!isHave){
             mSpinnerDanYuan.setSelection(idx); // 设置默认选项
         }
 
@@ -206,7 +206,7 @@ public class fragmentPageFour extends Fragment {
         mSpinnerFloor.setAdapter(FloorAdapter);
         //第五步：添加监听器，为下拉列表设置事件的响应
         mSpinnerFloor.setOnItemSelectedListener(selectedListener);
-        if (isHave){
+        if (!isHave){
             mSpinnerFloor.setSelection(idx); // 设置默认选项
         }
 
@@ -229,7 +229,7 @@ public class fragmentPageFour extends Fragment {
         mSpinnerRoom.setAdapter(RoomAdapter);
         //第五步：添加监听器，为下拉列表设置事件的响应
         mSpinnerRoom.setOnItemSelectedListener(selectedListener);
-        if (isHave){
+        if (!isHave){
             mSpinnerRoom.setSelection(idx); // 设置默认选项
         }
     }
@@ -238,6 +238,11 @@ public class fragmentPageFour extends Fragment {
     private Spinner.OnItemSelectedListener selectedListener = new Spinner.OnItemSelectedListener() {
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            if (view == null){
+                parent.setVisibility(View.VISIBLE);
+                return;
+            }
+
             switch (view.getId()){
                 case R.id.spinner_yuanqu:
                     CatchUtils.setParam(mActivity, "DeviceYuanQu", mYuanQuList.get(position).toString()); // 选择后保存

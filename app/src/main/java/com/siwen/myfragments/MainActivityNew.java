@@ -213,26 +213,26 @@ public class MainActivityNew extends AppCompatActivity implements View.OnClickLi
         mCurrentStepIndex--;
         switch (mCurrentStepIndex){
             case 1:
+                mSupportFragmentManager.popBackStack();
                 mRegisterStep2.setBackgroundResource(R.drawable.register_gray);
                 mRegisterNext1.setBackgroundResource(R.drawable.register_next);
-                mSupportFragmentManager.popBackStack();
                 mBtnPre.setText("返回");
                 break;
             case 2:
+                mSupportFragmentManager.popBackStack();
                 mRegisterStep3.setBackgroundResource(R.drawable.register_gray);
                 mRegisterNext2.setBackgroundResource(R.drawable.register_next);
-                mSupportFragmentManager.popBackStack();
                 mBtnPre.setText("上一步");
                 break;
             case 3:
+                mSupportFragmentManager.popBackStack();
                 mRegisterStep4.setBackgroundResource(R.drawable.register_gray);
                 mRegisterNext3.setBackgroundResource(R.drawable.register_next);
-                mSupportFragmentManager.popBackStack();
                 break;
             case 4:
+                mSupportFragmentManager.popBackStack();
                 mRegisterStep5.setBackgroundResource(R.drawable.register_qure_gray);
                 mRegisterNext4.setBackgroundResource(R.drawable.register_next);
-                mSupportFragmentManager.popBackStack();
                 mBtnPre.setVisibility(View.VISIBLE);
                 mBtnNext.setVisibility(View.VISIBLE);
                 break;
@@ -249,49 +249,58 @@ public class MainActivityNew extends AppCompatActivity implements View.OnClickLi
     private void doNext() {
         mCurrentStepIndex++;
         switch (mCurrentStepIndex){
-            case 1:
+            case 2:
                 mTransaction = mSupportFragmentManager.beginTransaction();
-                mTransaction.add(R.id.register_container, mFragmentPageOne)
+                mTransaction.setCustomAnimations(
+                                R.animator.card_flip_right_in_new,
+                                R.animator.card_flip_left_out_new,
+                                R.animator.card_flip_left_in_new,
+                                R.animator.card_flip_right_out_new)
+                        .replace(R.id.register_container, mFragmentPageTwo)
                         .addToBackStack(null)
                         .commit();
-                mBtnPre.setText("返回");
-                break;
-            case 2:
                 mRegisterStep2.setBackgroundResource(R.drawable.register_blue);
                 mRegisterNext1.setBackgroundResource(R.drawable.register_next_blue);
-                mTransaction = mSupportFragmentManager.beginTransaction();
-                mTransaction.remove(mFragmentPageOne);
-                mTransaction.add(R.id.register_container, mFragmentPageTwo)
-                        .addToBackStack(null)
-                        .commit();
                 mBtnPre.setText("上一步");
                 break;
             case 3:
+                mTransaction = mSupportFragmentManager.beginTransaction();
+                mTransaction.setCustomAnimations(
+                                R.animator.card_flip_right_in_new,
+                                R.animator.card_flip_left_out_new,
+                                R.animator.card_flip_left_in_new,
+                                R.animator.card_flip_right_out_new)
+                        .replace(R.id.register_container, mFragmentPageThree)
+                        .addToBackStack(null)
+                        .commit();
                 mRegisterStep3.setBackgroundResource(R.drawable.register_blue);
                 mRegisterNext2.setBackgroundResource(R.drawable.register_next_blue);
-                mTransaction = mSupportFragmentManager.beginTransaction();
-                mTransaction.remove(mFragmentPageTwo);
-                mTransaction.add(R.id.register_container, mFragmentPageThree)
-                        .addToBackStack(null)
-                        .commit();
                 break;
             case 4:
+                mTransaction = mSupportFragmentManager.beginTransaction();
+                mTransaction.setCustomAnimations(
+                                R.animator.card_flip_right_in_new,
+                                R.animator.card_flip_left_out_new,
+                                R.animator.card_flip_left_in_new,
+                                R.animator.card_flip_right_out_new)
+                        .replace(R.id.register_container, mFragmentPageFour)
+                        .addToBackStack(null)
+                        .commit();
                 mRegisterStep4.setBackgroundResource(R.drawable.register_blue);
                 mRegisterNext3.setBackgroundResource(R.drawable.register_next_blue);
-                mTransaction = mSupportFragmentManager.beginTransaction();
-                mTransaction.remove(mFragmentPageThree);
-                mTransaction.add(R.id.register_container, mFragmentPageFour)
-                        .addToBackStack(null)
-                        .commit();
                 break;
             case 5:
-                mRegisterStep5.setBackgroundResource(R.drawable.register_qure);
-                mRegisterNext4.setBackgroundResource(R.drawable.register_next_blue);
                 mTransaction = mSupportFragmentManager.beginTransaction();
-                mTransaction.remove(mFragmentPageFour);
-                mTransaction.add(R.id.register_container, mFragmentPageFive)
+                mTransaction.setCustomAnimations(
+                                R.animator.card_flip_right_in_new,
+                                R.animator.card_flip_left_out_new,
+                                R.animator.card_flip_left_in_new,
+                                R.animator.card_flip_right_out_new)
+                        .replace(R.id.register_container, mFragmentPageFive)
                         .addToBackStack(null)
                         .commit();
+                mRegisterStep5.setBackgroundResource(R.drawable.register_qure);
+                mRegisterNext4.setBackgroundResource(R.drawable.register_next_blue);
                 mBtnPre.setVisibility(View.GONE);
                 mBtnNext.setVisibility(View.GONE);
                 break;
