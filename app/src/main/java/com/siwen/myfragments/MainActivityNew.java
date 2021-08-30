@@ -196,7 +196,6 @@ public class MainActivityNew extends AppCompatActivity implements View.OnClickLi
         mSupportFragmentManager = getSupportFragmentManager();
         mTransaction = mSupportFragmentManager.beginTransaction();
         mTransaction.add(R.id.register_container, mFragmentPageOne)
-                .addToBackStack(null)
                 .commit();
 //        getSupportFragmentManager()
 //                .beginTransaction()
